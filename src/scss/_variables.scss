@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'special_eliteregular';
+    src: url('../../../recit_histoire/scss/SpecialElite-webfont.eot');
+    src: url('../../../recit_histoire/scss/SpecialElite-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../recit_histoire/scss/SpecialElite-webfont.woff') format('woff'),
+    url('../../../recit_histoire/scss/SpecialElite-webfont.ttf') format('truetype'),
+    url('../../../recit_histoire/scss/SpecialElite-webfont.svg#special_eliteregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-family-sans-serif: 'Ubuntu', sans-serif;
+$subheadings-font-family: 'Viga', sans-serif;
+$headings-font-family: 'special_eliteregular', cursive;
+$figuretexte: 'Times New Roman', serif;
+
+$primary:#4b4a4e;
+$secondary:#009ccd;
+$secondarypale:#0082c6;
+$success:#b7d233;
+$danger:#d0181e;
+$info:#fbb140;
+$warning:#FFE869;
+$light:#FDFBF7;
+$dark:#555555;
+$white:#ffffff; //
+
+$color1:#FFFFFF;
+$color2:#FFFFFF;
+$color3:#FFFFFF;
+$color4:#FFFFFF;
+$color5:#FFFFFF;
+
+$theme_color1:#D0181F;
+$theme_color2:#009CCD;
+$theme_color3:#FBB040;
+$theme_color4:#B7D233;
+
+$btn-radius: 30px;
+$navbar-header-color: #fff !default;
+
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 400 !default;
+$headings-color: $primary !default;
+
+$body-bg: #eef5f9 !default;
+
+$card-border-radius: 0 !default;
+$card-border-color: #d7dfe3 !default;
+
+$navbar-height: 50px !default;
+$navbar-bg: $primary !default;
+$navbar-bg-hover: $secondary !default;
+$navbar-separator: $secondary !default;
+
+$calendarEventCategoryColor: #fc4b6c !default;
+$calendarEventCourseColor: #7460ee !default;
+$calendarEventGlobalColor: #1e88e5 !default;
+$calendarEventGroupColor: #ffb22b !default;
+$calendarEventUserColor: #26c6da !default;
+
+$m-login-padding: 10px;
+$m-login-boxheight: 350px;
+$m-card-padding: 1.25rem;
+$m-moodle-color: #f98012 !default;
+$m-facebook-color: #3b5998 !default;
+$m-twitter-color: #55acee !default;
+$m-youtube-color: #cc181e !default;
+$m-googleplus-color: #d34836 !default;
+$m-linkedin-color: #007bb5 !default;
+$m-instagram-color: #8a3ab9 !default;
+
+$carousel-control-color: $secondary !default;
+$carousel-control-prev-icon-bg: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'$secondary\' viewBox=\'0 0 8 8\'%3E%3Cpath d=\'M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z\'/%3E%3C/svg%3E" !default;
+$carousel-control-next-icon-bg: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'$secondary\' viewBox=\'0 0 8 8\'%3E%3Cpath d=\'M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z\'/%3E%3C/svg%3E" !default;
+
+
+
+body, h4, h5 {
+    font-family: $font-family-sans-serif;
+}
+h1, h2 {
+    font-family: $subheadings-font-family;
+}
+h3 {
+    font-family: $headings-font-family !important;
+}
+/*-------------------------------*\
+    PAGE HEADER
+\*-------------------------------*/
+#page-header {
+	height:130px!important;
+    .card {
+		height:130px;
+		background: black;
+		background-image: url("https://recitfad.ca/depot/histoire4/banerehs.png");
+		background-repeat: no-repeat;
+		background-size: 2017px 130px !important;
+        background-position: top right !important;
+     }
+}
+
+
+
+
+/*-------------------------------*\
+    Custom rows styles
+\*-------------------------------*/
+/*
+.color-row {
+    background: $secondarypale;
+}
+.diago-row {
+    background: $secondary;
+    background: -moz-linear-gradient(75deg, $secondarypale 0%, $secondarypale 50%, $secondary 50%);
+    background: -webkit-linear-gradient(75deg, $secondarypale 0%, $secondarypale 50%, $secondary 50%);
+    background: linear-gradient(75deg, $secondarypale 0%, $secondarypale 50%, $secondary 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$secondarypale",endColorstr="$secondary",GradientType=1);
+}
+.degrade-row {
+    background: rgb(0,99,145);
+    background: -moz-linear-gradient(45deg,  rgba(0,99,145,1) 0%, rgba(0,156,205,1) 100%);
+    background: -webkit-linear-gradient(45deg,  rgba(0,99,145,1) 0%,rgba(0,156,205,1) 100%);
+    background: linear-gradient(45deg,  rgba(0,99,145,1) 0%,rgba(0,156,205,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006391', endColorstr='$secondary',GradientType=1 );
+}
+.degrade-row {
+    background: $secondary;
+    background: -moz-linear-gradient(45deg,  $secondary 0%, $secondarypale 100%);
+    background: -webkit-linear-gradient(45deg,  $secondary 0%, $secondarypale 100%);
+    background: linear-gradient(45deg,  $secondary 0%, $secondarypale 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006391', endColorstr='$secondary',GradientType=1 );
+}
+*/
+
+/*-------------------------------*\
+    Buttons - Bars
+\*-------------------------------*/
+/*-- Button 1 --*/
+h5 a,
+h5 a.style_btn_1 {
+    display: inline-block;
+    padding: 12px 12px 14px;
+    margin: 0 2px 4px 2px;
+    -moz-transform:    skewX(15deg) !important;
+    -webkit-transform: skewX(15deg) !important;
+    -o-transform:      skewX(15deg) !important;
+    transform:         skewX(15deg) !important;
+    color: $dark;
+    border-left: solid 5px $theme_color2;
+    background: #fff;
+}
+h5 a:hover,
+h5 a.style_btn_1:hover {
+    color: $white;
+    text-decoration: none;
+    border-left: solid 5px $theme_color2;
+    background: $theme_color1;
+}
+
+button.tt-section-image-link,.recit-btn-style_btn_1 {
+    display: inline-block;
+    padding: 12px 12px 14px;
+    margin: 0 2px 4px 2px;
+    -moz-transform:    skewX(15deg) !important;
+    -webkit-transform: skewX(15deg) !important;
+    -o-transform:      skewX(15deg) !important;
+    transform:         skewX(15deg) !important;
+    color: $dark;
+    border-left: solid 5px $theme_color2;
+    background: #fff;
+}
+button.tt-section-image-link,.recit-btn-style_btn_1:hover {
+    color: $white;
+    text-decoration: none;
+    border-left: solid 5px $theme_color2;
+background: $theme_color1;}
+/*-- Button 2 --*/
+h5 a.style_btn_2 {
+    border-left: solid 5px $theme_color1;
+}
+h5 a.style_btn_2:hover {
+    color: $white;
+    border-left: solid 5px $theme_color1;
+    background: $theme_color2;
+}
+/*-- Button 3 --*/
+h5 a.style_btn_3 {
+    color: $white;
+    border-left: solid 5px $theme_color1;
+    background: $dark;
+}
+h5 a.style_btn_3:hover {
+    color: $white;
+    border-left: solid 5px $theme_color2;
+    background: $dark;
+}
+/*-- Button 4 --*/
+h5 a.style_btn_4 {
+    color: $dark;
+    border-left: solid 5px $white;
+    border-right: solid 5px $white;
+    background: $white;
+}
+h5 a.style_btn_4:hover {
+    color: $white;
+    border-left: solid 5px $dark;
+    border-right: solid 5px $dark;
+    background: $dark;
+}
+/*-- Button 5 --*/
+h5 a.style_btn_5 {
+    color: $white;
+    border-left: solid 5px $theme_color1;
+    border-right: solid 5px $theme_color1;
+    background: $theme_color1;
+}
+h5 a.style_btn_5:hover {
+    color: $theme_color1;
+    border-left: solid 5px $white;
+    border-right: solid 5px $white;
+    background: $white;
+}
+/*-- Button 6 --*/
+h5 a.style_btn_6 {
+    color: $white;
+    border-left: solid 5px $theme_color2;
+    border-right: solid 5px $theme_color2;
+    background: $theme_color2;
+}
+h5 a.style_btn_6:hover {
+    color: $theme_color2;
+    border-left: solid 5px $white;
+    border-right: solid 5px $white;
+    background: $white;
+}
+
+h5 a strong {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    -moz-transform:    skewX(-15deg) !important;
+    -webkit-transform: skewX(-15deg) !important;
+    -o-transform:      skewX(-15deg) !important;
+    transform:         skewX(-15deg) !important;
+    background: none;
+}
+
+.recit-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    -moz-transform:    skewX(-15deg) !important;
+    -webkit-transform: skewX(-15deg) !important;
+    -o-transform:      skewX(-15deg) !important;
+    transform:         skewX(-15deg) !important;
+    background: none;
+}
+
+@media screen and (min-width: 768px) {
+    h4 strong {
+        padding: 14px 52px 16px 0;
+    }
+    h4 strong:after {
+        display: block;
+        width: 60px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -28px;
+        transform: skewX(15deg);
+        background: $theme_color2;
+        z-index: 2;
+    }
+    h4 strong:before {
+        display: block;
+        width: 1000px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -998px;
+        background: $theme_color2;
+        z-index: 2;
+    }
+    h4 strong:after {
+        left: auto;
+        right: -28px;
+    }
+}
