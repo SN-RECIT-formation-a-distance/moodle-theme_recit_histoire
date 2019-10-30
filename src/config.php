@@ -45,94 +45,11 @@ $THEME->editor_sheets = [];
 // themes. We could add more than one parent here to inherit from multiple parents, and if we did they would be processed in        
 // order of importance (later themes overriding earlier ones). Things we will inherit from the parent theme include                 
 // styles and mustache templates and some (not all) settings.                                                                       
-$THEME->parents = ['recit','boost' ];                                                                                                        
- 
-// A dock is a way to take blocks out of the page and put them in a persistent floating area on the side of the page. Boost         
-// does not support a dock so we won't either - but look at bootstrapbase for an example of a theme with a dock.                    
-$THEME->enable_dock = false;                                                                                                        
- 
-// This is an old setting used to load specific CSS for some YUI JS. We don't need it in Boost based themes because Boost           
-// provides default styling for the YUI modules that we use. It is not recommended to use this setting anymore.                     
-$THEME->yuicssmodules = array();                                                                                                    
- 
-// Most themes will use this rendererfactory as this is the one that allows the theme to override any other renderer.               
-$THEME->rendererfactory = 'theme_overridden_renderer_factory';                                                                      
- 
-// This is a list of blocks that are required to exist on all pages for this theme to function correctly. For example               
-// bootstrap base requires the settings and navigation blocks because otherwise there would be no way to navigate to all the        
-// pages in Moodle. Boost does not require these blocks because it provides other ways to navigate built into the theme.            
-$THEME->requiredblocks = '';   
- 
-// This is a feature that tells the blocks library not to use the "Add a block" block. We don't want this in boost based themes because
-// it forces a block region into the page when editing is enabled and it takes up too much room.
-$THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+$THEME->parents = ['recit'];   
 
-// This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
-// we want to allow presets uploaded to our own theme file area to be selected in the preset list.
-$THEME->scss = function($theme) {
-    // We need to load the config for our parent theme because that is where the preset setting is defined.
-    $parentconfig = theme_config::load('recit');
-    // Call a function from our parent themes lib.php.
-    // file to fetch the content of the themes main SCSS file based on it's own config, not ours.
-    return theme_recit_get_local_scss_content($parentconfig, '/theme/recit_histoire/scss/_variables.scss');
-};
+$THEME->parents_exclude_sheets[] = "recit";
 
-// Process extra scss to our final stylesheet.
-$THEME->extrascsscallback = 'theme_recit_get_extra_scss';
+$THEME->sheets[] = "recit-histoire";
 
-// Process pre scss to our final stylesheet.
-$THEME->prescsscallback = 'theme_recit_get_pre_scss';
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';                                                                                                  
 
-// Add a custom icon system to the theme.
-$THEME->iconsystem = '\theme_recit\util\icon_system';
-//$THEME->iconsystem = \core\output\icon_system::FONTAWESOME;
-
-$THEME->layouts = [
-    'admin' => array(
-        'file' => 'columns2.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-		'options' => array('nofooter' => true),
-    ),
-	// Most backwards compatible layout without the blocks - this is the layout used by default.
-    'base' => array(
-        'file' => 'columns2.php',
-        'regions' => array(),
-		'options' => array('nofooter' => true),
-    ),
-    // The site home page.
-    'frontpage' => array(
-        'file' => 'frontpage.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nofooter' => true,'nonavbar' => true),
-    ),
-    // My dashboard page.
-    'mydashboard' => array(
-        'file' => 'mydashboard.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nofooter' => true,'nonavbar' => true, 'langmenu' => true),
-    ),
-    // Course page.
-    'course' => array(
-        'file' => 'course.php',
-        'regions' => array('side-pre'),
-       // 'defaultregion' => 'side-pre',
-        'options' => array('nofooter' => true,'nonavbar' => false, 'langmenu' => true),
-    ),
-    // Internal course modules page.
-    'incourse' => array(
-        'file' => 'incourse.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nofooter' => true,'nonavbar' => false, 'langmenu' => true),
-    ),
-    // Used during upgrade and install, and for the 'This site is undergoing maintenance' message.
-    // This must not have any blocks, links, or API calls that would lead to database or cache interaction.
-    // Please be extremely careful if you are modifying this layout.
-    'maintenance' => array(
-        'file' => 'maintenance.php',
-        'regions' => array(),
-    ),
-];
