@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
  
 // This is the version of the plugin.                                                                                               
-$plugin->version = '2019110800';
+$plugin->version = '20191202000';
 
 // This is the named version.
 $plugin->release = '3.5.0';
