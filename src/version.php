@@ -43,5 +43,5 @@ $plugin->component = 'theme_recit_histoire';
  
 // This is a list of plugins, this plugin depends on (and their versions).                                                          
 $plugin->dependencies = [                                                                                                           
-    'theme_recit' => '202013000'                                                                                                   
+    'theme_recit' => '2020013000'                                                                                                   
 ];
