@@ -1,0 +1,100 @@
+
+/**************************************
+ * FONTS
+ *************************************/
+ $font-family-sans-serif: 'Ubuntu', sans-serif;
+ $font-family-text: 'Ubuntu', sans-serif;
+ $font-family-text-size: .9rem;
+ $headings-font-family: 'SpecialElite', cursive;
+ $figuretexte: 'Times New Roman', serif;
+
+ 
+ /**************************************
+  * COLORS
+  *************************************/
+ $primary:#4b4a4e;
+ $primaryBold:#454348;
+ $warning:#FFE869;
+ $danger:#D0181F;
+ $success:#B7D233;
+ $info:#FBB040;
+ $primarypale:#E9E8E9;
+ $primarycomplement:$danger;
+ $secondary:#009ccd;
+ $secondaryBold: #038fbb;
+ $secondarypale:#DFF3F9;
+ $secondarycomplement:$warning;
+ 
+ $successpale:#EDF4CC;
+ 
+ $dangerpale:#F9E2E3;
+ 
+ $infopale:#FEF5E7;
+ 
+
+ $light:#FDFBF7;
+ $dark:#555555;
+ 
+ $color1:#666;
+ $color2:#FFFFFF;
+ $color3:#FFFFFF;
+ $color4:#FFFFFF;
+ $color5:#FFFFFF;
+ $white:#FFFFFF;
+ $black:#000;
+ 
+ $theme_color1:#D0181F;
+ $theme_color2:#009CCD;
+ $theme_color3:#FBB040;
+ $theme_color4:#B7D233;
+ $theme_color5:#494755;
+  
+ /**************************************
+  * GENERAL
+  *************************************/
+ 
+ $headings-font-family: $headings-font-family !default;
+ $subheadings-font-family: $headings-font-family !default;
+
+// 6. Collapsible
+// ==========================================================================
+
+$collapsible-height: 3rem !default;
+$collapsible-line-height: $collapsible-height !default;
+$collapsible-header-color: #fff !default;
+$collapsible-border-color: #ddd !default;
+
+// 12. Grid
+// ==========================================================================
+
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+ 
+// 14. Side Navigation
+// ==========================================================================
+
+$sidenav-width: 300px !default;
+$sidenav-font-size: 14px !default;
+$sidenav-font-color: rgba(0,0,0,.87) !default;
+$sidenav-bg-color: #fff !default;
+$sidenav-padding: 16px !default;
+$sidenav-item-height: 48px !default;
+$sidenav-line-height: $sidenav-item-height !default;
+$btn-radius: 30px;
+$font-family-text: 'Ubuntu', sans-serif;
+$font-family-text-size: .9rem;
+$headings-font-size: 2.34375rem;
+$top-navbar-height: 67px;
+$course-banner-max-height: 150px;
+$card-border-radius: 0 !default;
+$page-max-width: 1500px;
+$nav-color: #343a40;
+$body-bg: #eef5f9 !default;
+$body-color: #373a3c;
+
+/* Current directory is recit2/scss */
+@import "./recit/import";
+@import "./deprecated/editorhtml";
+@import "./deprecated/sous-theme";
