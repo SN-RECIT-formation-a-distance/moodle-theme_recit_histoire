@@ -97,4 +97,32 @@ $body-color: #373a3c;
 /* Current directory is recit2/scss */
 @import "./recit/import";
 @import "./deprecated/editorhtml";
-@import "./deprecated/sous-theme";
+
+body.theme-recit-histoire {
+    
+    .menuM5{
+        background-color: $primary;
+    
+        ul.navbar-nav{
+            ul.dropdown-menu{
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+.editeur, body.theme-recit-histoire#page-mod-book-view{
+    .block-region {
+        .card-header {
+            font-family: $headings-font-family;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 72px;
+            margin-bottom: 20px;
+            font-size: x-large;
+            padding: .75rem 1.25rem;
+            background-color: rgba(46, 43, 43, 0.459);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+    }
+}
